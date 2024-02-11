@@ -18,13 +18,14 @@ const MyComponent = () => {
                 </p>
                 <CustomButton
                     title="Забронировать машину"
-                    containterStyles = "bg-primary-blue text-white rounded-full mt-10"
+                    containerStyle = "bg-primary-blue text-white rounded-full mt-10"
                     handleClick={handleScroll}
                 />
             </div>
             <div className="hero__image-container">
                 <div className="hero__image">
                     <Image src="/hero.png" alt="hero" fill className="object-contain" />
+                    <div className="hero__image-overlay"></div>
                 </div>
             </div>
         </div>
