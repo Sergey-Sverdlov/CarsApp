@@ -16,7 +16,7 @@ const MyComponent = () => {
                 <p className="hero__subtitle">
                     Наш сервис поможет Вам забронировать понравившейся Вам автомобиль!
                 </p>
-                <div className="border-2">
+                <div>
                     <CustomButton
                         title="Забронировать машину"
                         containerStyles="bg-primary-blue text-white rounded-full mt-10 self-center"
