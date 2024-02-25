@@ -12,6 +12,7 @@ interface CarCardProps {
 
 const CarCard: React.FC<CarCardProps> = ({car}: CarCardProps) => {
     const {city_mpg, year, make, model, transmission, drive} = car
+    const [isOpen, setIsOpen] = React.useState(false)
     const carRent = calculateCarRent(city_mpg, year)
     return (
         <div className="car-card">
@@ -34,7 +35,7 @@ const CarCard: React.FC<CarCardProps> = ({car}: CarCardProps) => {
                 <Image src="/hero.png" alt="car Image"
                        fill priority className="object-contain"/>
             </div>
-            <div className="relative flex w-full mt-2">
+            <div className="relative flex w-full mt-2 group">
                 <div className="flex group-hover:invisible w-full justify-between
                 text-gray-500">
                     <div className="flex flex-col justify-center items-center gap-2">
@@ -59,7 +60,21 @@ const CarCard: React.FC<CarCardProps> = ({car}: CarCardProps) => {
                         </p>
                     </div>
                 </div>
+                <div className="car-card__btn-container">
+                    <CustomButton
+                        title="Посмотреть больше"
+                        containerStyles="w-full py-[16px] rounded-full bg-primary-blue border-2"
+                        textStyles="text-white text-[14px] leading=[17px] font-bold"
+                        rightIcon="/right-arrow.svg"
+                        handleClick={() => setIsOpen(true)}
+                    />
+                </div>
             </div>
+
+            <CarDetails
+                isOpen={isOpen}
+                closeModel={() => setIsOpen(false)} car={car}
+            />
         </div>
     );
 };

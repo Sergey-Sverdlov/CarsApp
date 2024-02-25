@@ -8,6 +8,7 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      display: ["group-hover"],
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
