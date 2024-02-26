@@ -15,6 +15,18 @@ const CarCard: React.FC<CarCardProps> = ({car}: CarCardProps) => {
     const {city_mpg, year, make, model, transmission, drive} = car
     const [isOpen, setIsOpen] = React.useState(false)
     const carRent = calculateCarRent(city_mpg, year)
+    const getDrive = (drive) => {
+        switch (drive.toUpperCase()) {
+            case 'FWD':
+                return "Передний привод"
+            case 'RWD' :
+                return "Задний привод"
+            case '4WD':
+                return "Полный привод"
+            default:
+                return "Нет информации о приводе"
+        }
+    }
     return (
         <div className="car-card">
             <div className="car-card__content">
@@ -50,7 +62,7 @@ const CarCard: React.FC<CarCardProps> = ({car}: CarCardProps) => {
                         <Image src="/tire.svg" alt="steering wheel"
                                width={20} height={20}/>
                         <p className="text-[14px]">
-                            {drive.toUpperCase() === 'FWD' ? "Полный привод" : "Передний привод"}
+                            {getDrive(drive)}
                         </p>
                     </div>
                     <div className="flex flex-col justify-center items-center gap-2">
