@@ -23,13 +23,15 @@ const CarCard: React.FC<CarCardProps> = ({car}: CarCardProps) => {
                 return "Задний привод"
             case '4WD':
                 return "Полный привод"
+            case 'AWD':
+                return "Полный привод"
             default:
-                return "Нет информации о приводе"
+                return "Привод неизвестен"
         }
     }
     return (
         <div className="car-card">
-            <div className="car-card__content">
+            <div className="car-card__content"  >
                 <h2 className="car-card__content-title">
                     {make} {model}
                 </h2>
@@ -75,7 +77,7 @@ const CarCard: React.FC<CarCardProps> = ({car}: CarCardProps) => {
                 </div>
                 <div className="car-card__btn-container">
                     <CustomButton
-                        title="Посмотреть больше"
+                        title="Посмотреть детальнее"
                         containerStyles="w-full py-[16px] rounded-full bg-primary-blue border-2"
                         textStyles="text-white text-[14px] leading=[17px] font-bold"
                         rightIcon="/right-arrow.svg"

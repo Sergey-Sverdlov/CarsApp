@@ -43,7 +43,7 @@ export const manufacturers = [
 ];
 
 export const yearsOfProduction = [
-    { title: "Year", value: "" },
+    { title: "Год выпуска", value: "" },
     { title: "2015", value: "2015" },
     { title: "2016", value: "2016" },
     { title: "2017", value: "2017" },
@@ -57,40 +57,40 @@ export const yearsOfProduction = [
 
 export const fuels = [
     {
-        title: "Fuel",
+        title: "Бензин",
         value: "",
     },
     {
-        title: "Gas",
-        value: "Gas",
+        title: "Газ",
+        value: "Газ",
     },
     {
-        title: "Electricity",
-        value: "Electricity",
+        title: "Электрический",
+        value: "Электрический",
     },
 ];
 
 export const footerLinks = [
     {
-        title: "About",
+        title: "О компании",
         links: [
-            { title: "How it works", url: "/" },
-            { title: "Featured", url: "/" },
-            { title: "Partnership", url: "/" },
-            { title: "Bussiness Relation", url: "/" },
+            { title: "Как мы работаем", url: "/" },
+            { title: "Развитие", url: "/" },
+            { title: "Партнеры", url: "/" },
+            { title: "Контакты", url: "/" },
         ],
     },
     {
-        title: "Company",
+        title: "Компания",
         links: [
-            { title: "Events", url: "/" },
-            { title: "Blog", url: "/" },
-            { title: "Podcast", url: "/" },
-            { title: "Invite a friend", url: "/" },
+            { title: "События", url: "/" },
+            { title: "Блог", url: "/" },
+            { title: "Подкаст", url: "/" },
+            { title: "Вакансии", url: "/" },
         ],
     },
     {
-        title: "Socials",
+        title: "Социальные сети",
         links: [
             { title: "Discord", url: "/" },
             { title: "Instagram", url: "/" },
