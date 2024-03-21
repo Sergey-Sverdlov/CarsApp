@@ -52,7 +52,7 @@ const CarDetails = ({isOpen, closeModel, car}: CarDetailsProps) => {
                                     <button
                                         type="button"
                                         onClick={closeModel}
-                                        className="absolute top-2 right-2 z-10 w-fit
+                                        className="absolute top-10 right-2 z-10 w-fit
                                         p-2 bg-primary-blue rounded-full"
                                     >
                                         <Image
