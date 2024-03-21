@@ -21,8 +21,7 @@ const CarDetails = ({isOpen, closeModel, car}: CarDetailsProps) => {
                 leaveFrom="transform scale-100 opacity-100"
                 leaveTo="transform scale-95 opacity-0"
                 appear
-                show={isOpen}
-                as={Fragment}>
+                show={isOpen}>
                 <Dialog className="relative z-10" onClose={closeModel}>
                     <Transition.Child
                         as={Fragment}
